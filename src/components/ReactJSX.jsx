@@ -24,6 +24,18 @@ const ReactNoJSX = () => {
         React.createElement('h2', null, 'Nama saya ', greetings(asisten)), 
         React.createElement('p', {style:{color:'#ff0000'}}, 'ini adalah contoh tanpa JSX')
     )
-} 
+}
+
+const OpeningJSX = () => {
+    return(
+        <div>
+            <h1>Modul 2 : Component and Props</h1>
+            <h2>Praktikum RPLBK - Kelompok 4</h2>
+        </div>
+        
+    );
+}
+
 export default ReactJSX;
 export {ReactNoJSX};
+export  {OpeningJSX};

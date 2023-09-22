@@ -1,32 +1,44 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import React from 'react';
 import './App.css';
-import ReactJSX, {ReactNoJSX} from './components/ReactJSX';
-import CompAndProps from "./components/CompAndProps";
+import {OpeningJSX} from './components/ReactJSX';
+import Profile from "./components/ProfileCard";
 import Button from './elements/Button';
 import TextInput from './elements/TextInput';
 
 
 function App() {
-  return (
-    <>
-      <div className="App">
-        <header className="App-header">
-          <ReactJSX />
-          <ReactNoJSX /> 
-          <div className="Components">
-            <CompAndProps bgColor="#66ccff"/>
-          </div>
-          <form action="">
-            <TextInput border="red" placeholder="Nama"/>
-            <Button background="blue">Kirim</Button>
-          </form>
+  const [name, setName] = useState('');
+  const [submittedName, setSubmittedName] = useState('');
 
-        </header>
-      </div>
-    </>
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Nama Anda: ', name);
+    setSubmittedName(name);
+  };
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <OpeningJSX />
+        <div className="Components">
+          <Profile />
+        </div>
+        <form action="" onSubmit={handleSubmit}>
+            <TextInput border="red" placeholder="Nama" value={name} onChange={handleNameChange} />
+            <Button background="blue" type='submit'>Kirim</Button>
+        </form>
+        {submittedName && (
+          <div>
+            <p>Halo, {submittedName}. Semoga harimu awokawokaowk</p>
+          </div>
+        )}
+      </header>
+    </div>
   );
 }
 export default App;
