@@ -88,7 +88,7 @@ export default class Profile extends Component{
                     nim="21120120120003"
                     avatar="https://avatars.githubusercontent.com/u/82700460?v=4"
                     github="sholekahh"
-                    background="#141E46"
+                    background="#141E46" 
                 />
                 <ProfileCard
                     name="Ariz Muhammad Fajar"
