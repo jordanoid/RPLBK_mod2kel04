@@ -3,7 +3,7 @@ import '../App.css';
 import styled, {css} from 'styled-components';
 
 const CardContainer = styled.div`
-  width: 600px;
+  width: 650px;
   border: 1px solid #ccc;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -65,6 +65,7 @@ function ProfileCard(props){
         <CardContent>
             <CardTitle>{props.name}</CardTitle>
             <CardDescription>{props.nim}</CardDescription>
+            <CardDescription>{props.email}</CardDescription>
             <CardDescription>Github : {props.github}</CardDescription>
             <StyledButton onClick={handleButtonClick}>Github Profile</StyledButton>
         </CardContent>
@@ -79,6 +80,7 @@ export default class Profile extends Component{
                 <ProfileCard
                     name="Jordano Iqbal Darmawan"
                     nim="21120120130073"
+                    email="jordanoid@students.undi.ac.id"
                     avatar="https://avatars.githubusercontent.com/u/79011617?v=4"
                     github="jordanoid"
                     background="#33333f"
@@ -86,6 +88,7 @@ export default class Profile extends Component{
                 <ProfileCard
                     name="Siti Sholekah"
                     nim="21120120120003"
+                    email="sitisholekah@students.undip.ac.id"
                     avatar="https://avatars.githubusercontent.com/u/82700460?v=4"
                     github="sholekahh"
                     background="#141E46" 
@@ -93,6 +96,7 @@ export default class Profile extends Component{
                 <ProfileCard
                     name="Ariz Muhammad Fajar"
                     nim="21120120140171"
+                    email="arizmuhammadfajar@students.undip.ac.id"
                     avatar="https://avatars.githubusercontent.com/u/82720584?v=4"
                     github="Ariz-99"
                     background="#d9e2e3"
@@ -100,6 +104,7 @@ export default class Profile extends Component{
                 <ProfileCard
                     name="Muhammad Ridwan"
                     nim="21120120140149"
+                    email="muhammadridwan07@students.undip.ac.id"
                     avatar="https://avatars.githubusercontent.com/u/82718745?v=4"
                     github="mridwann7"
                     background="#6fa8dc"
