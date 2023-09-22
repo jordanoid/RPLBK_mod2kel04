@@ -90,6 +90,13 @@ export default class Profile extends Component{
                     github="sholekahh"
                     background="#141E46"
                 />
+                <ProfileCard
+                    name="Ariz Muhammad Fajar"
+                    nim="21120120140171"
+                    avatar="https://avatars.githubusercontent.com/u/82720584?v=4"
+                    github="Ariz-99"
+                    background="#d9e2e3"
+                />
             </div> 
             
         )
