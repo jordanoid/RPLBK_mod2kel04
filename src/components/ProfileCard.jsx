@@ -3,24 +3,24 @@ import '../App.css';
 import styled, {css} from 'styled-components';
 
 const CardContainer = styled.div`
-  width: 300px;
+  width: 600px;
   border: 1px solid #ccc;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
   margin: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   ${(props) => props.background && css`
   background: ${(props) =>props.background}; `};
 `;
 
 const CardImage = styled.img`
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 60px;
-  margin-top: 10px;
+    width: 250px;
+    height: 250px; 
+    border-radius: 10%;
+    margin: 10px;
 `;
 
 const CardContent = styled.div`
@@ -47,7 +47,7 @@ const StyledButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
-  outline: none; /* Remove the button outline on focus */
+  outline: none;
 
   &:hover {
     background-color: #0056b3;

@@ -42,7 +42,7 @@
 }
 
 .User-info{
-  display: flex;
+  display: inline-grid;
   width: auto;
   color: #fff;
   border-radius: 20px;
